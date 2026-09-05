@@ -1,0 +1,4 @@
+interface:
+  display_name: "gRPC Testkit Testing"
+  short_description: "Write Python gRPC tests with grpc-testkit"
+  default_prompt: "Use $grpc-testkit-testing to design and write repository-grounded Python gRPC tests with grpc-testkit."
