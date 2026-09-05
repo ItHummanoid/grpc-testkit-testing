@@ -1,9 +1,10 @@
 ---
 name: grpc-testkit-testing
 description: Design, write, review, and troubleshoot Python pytest tests for gRPC services with the grpc-testkit library. Use for generated stubs or dynamic descriptors, synchronous or asynchronous clients, every RPC cardinality, status and metadata assertions, TLS/mTLS, explicit retries, snapshots, reflection, and in-process gRPC test servers. Do not activate for generic grpcio implementation work that does not use grpc-testkit.
+license: MIT
+compatibility: Compatible with Claude Code and OpenAI Codex on macOS, Linux, and Windows. Requires a Python project that uses grpc-testkit.
 metadata:
   author: Yaroslav Chervatyuk
-  license: MIT
   source: https://gitlab.com/ItHummanoid/grpc-testkit
   verified-library-version: "0.3.1"
 ---
@@ -47,7 +48,7 @@ Read only the references needed for the task:
 
 ## Integration boundaries
 
-This skill is library-specific. It may consume repository findings from an audit or source-inventory skill and may complement an architecture skill, but it must remain usable without the `python-qa-agent` plugin. When a repository already uses `grpc-testkit`, extend its wrappers and fixtures instead of scaffolding a competing generic gRPC client layer.
+This standalone skill is library-specific. It may consume repository findings from an audit or source-inventory skill and may complement an architecture skill, but it must not depend on another skill or plugin. When a repository already uses `grpc-testkit`, extend its wrappers and fixtures instead of scaffolding a competing generic gRPC client layer.
 
 ## Expected output
 
